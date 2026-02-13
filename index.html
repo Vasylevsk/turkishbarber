@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Disable Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- Primary Meta Tags -->
     <title>GC Turkish Barber | Professional Barbershop in Minehead, Somerset</title>
     <meta name="title" content="GC Turkish Barber | Professional Barbershop in Minehead, Somerset">
@@ -369,6 +374,69 @@
             color: var(--text-secondary);
         }
 
+        /* Full Service Package */
+        .service-package {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .package-price {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .package-includes {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .package-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+
+        .package-item {
+            padding: 0.75rem 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.05rem;
+        }
+
+        .package-item:last-child {
+            border-bottom: none;
+        }
+
+        .package-notes {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .package-notes-title {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .package-note {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-note:last-child {
+            margin-bottom: 0;
+        }
+
         /* About */
         .about .section-inner {
             padding: 6rem 1.5rem;
@@ -525,6 +593,22 @@
         .footer-location {
             margin-top: 0.5rem;
             font-size: 0.85rem;
+        }
+
+        .footer-link {
+            margin-top: 1rem;
+        }
+
+        .footer-link a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link a:hover,
+        .footer-link a:active {
+            color: var(--accent);
         }
 
         .footer-credit {
@@ -802,7 +886,6 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#policy">Policy</a></li>
             </ul>
         </nav>
     </header>
@@ -886,41 +969,24 @@
                 </ul>
             </div>
 
-            <div class="service-category">
-                <h3>Additional Services</h3>
-                <ul class="service-list">
-                    <li class="service-item no-price">
-                        <span class="service-name">Hair cut</span>
-                    </li>
-                    <li class="service-item no-price">
-                        <span class="service-name">Wet shave with cut throat</span>
-                    </li>
-                    <li class="service-item no-price">
-                        <span class="service-name">Hot towel</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="service-category">
+            <div class="service-category service-package">
                 <h3>Full Service Package</h3>
-                <div style="margin-bottom: 1.5rem;">
-                    <p style="color: var(--text-primary); font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">£36</p>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">Includes the following:</p>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Hair cut</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Wet shave with cut throat</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Hot towel</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Ear flames</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Styling</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Eyebrow Trim</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary); border-bottom: 1px solid var(--border);">Hair wash</li>
-                        <li style="padding: 0.5rem 0; color: var(--text-secondary);">Finishing products</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong style="color: var(--text-secondary);">Important Notes:</strong></p>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">• Kids services are only for children up to 10 years old.</p>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">• All haircuts include hair washing (except children's haircuts).</p>
+                <div class="package-price">£36</div>
+                <p class="package-includes">Includes the following:</p>
+                <ul class="package-list">
+                    <li class="package-item">Hair cut</li>
+                    <li class="package-item">Wet shave with cut throat</li>
+                    <li class="package-item">Hot towel</li>
+                    <li class="package-item">Ear flames</li>
+                    <li class="package-item">Styling</li>
+                    <li class="package-item">Eyebrow Trim</li>
+                    <li class="package-item">Hair wash</li>
+                    <li class="package-item">Finishing products</li>
+                </ul>
+                <div class="package-notes">
+                    <p class="package-notes-title">Important Notes:</p>
+                    <p class="package-note">• Kids services are only for children up to 10 years old.</p>
+                    <p class="package-note">• All haircuts include hair washing (except children's haircuts).</p>
                 </div>
             </div>
                 </div>
@@ -1010,55 +1076,15 @@
             </div>
             </div>
         </section>
-
-        <!-- Policy Section -->
-        <section id="policy" class="policy">
-            <div class="section-inner">
-                <h2 class="section-title">H&R SALONS POLICY</h2>
-                <div class="policy-content">
-                    <div class="policy-section">
-                        <h3>PRICING & COMPLAINTS POLICY</h3>
-                        <ul class="policy-list">
-                            <li>The full price list is shown in these premises, please check pricing before your service is started and/or ask any member of the team about the pricing.</li>
-                            <li>Gift Cards and/or Loyalty Cards are non-refundable.</li>
-                            <li>If in the unlikely event you are unhappy with your service we will be happy to discuss any problems within 48 hours, please contact the manager asap after the service.</li>
-                            <li>If for any reason you do not have sufficient funds to pay for your service, we are happy to let you go to get it, however you must leave an official document or valuable item.</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3>HEALTH & SAFETY</h3>
-                        <ul class="policy-list">
-                            <li>It is important that you inform us of any health conditions, allergies or injuries during your consultation with us, as it may affect your service.</li>
-                            <li>A skin test may be required 48 hours before you have the service.</li>
-                            <li>H&R Salons welcomes all well-behaved children. Please remind your children to avoid running, spinning, climbing on chairs or opening any closed drawers in the salon. Most drawers contain sharp objects and chemicals that could be potentially dangerous to unsuspecting children. Also, the same behaviour is expected from adults.</li>
-                            <li>The members of the team are not allowed to provide a service if during the consultation they find head lice, open wounds or any other skin condition that may be sensitive to infection. The team member can ask for a second opinion, but will guarantee discretion.</li>
-                            <li>H&R Salons reserves the right to refuse Products & Services to anyone at its discretion if it feels the policies herein are being abused.</li>
-                            <li>Any kind of services will not be provided if the client is under the effects of drugs, alcohol or his/her behaviour is suspect.</li>
-                            <li>If anyone has an accident in the salon, it should be recorded in the accident book in the reception.</li>
-                            <li>Clients under 16 should have a signed parental consent form if the parent/s are not in the premises while the service is being carried out.</li>
-                        </ul>
-                    </div>
-
-                    <div class="policy-section">
-                        <h3>PERSONAL BELONGINGS</h3>
-                        <ul class="policy-list">
-                            <li>H&R Salons is not responsible at any time for your personal belongings. The members of the team will let you place them next to your hairdressing station but they are your responsibility.</li>
-                            <li>We would recommend that jewellery is removed during chemical services, it is your responsibility if you refuse to take your jewellery off.</li>
-                            <li>Any items left in the salon will be kept for 7 days, if they are not claimed they will be sent to any charity shop in town. Please make sure if your personal belongings are lost and you believe they have been left in the salon you call us to make sure we keep them for you.</li>
-                        </ul>
-                    </div>
-
-                    <p class="policy-note">H&R Salons have the right to update this policy any time</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; GC Turkish Barber</p>
         <p class="footer-location">Minehead, Somerset</p>
+        <p class="footer-link">
+            <a href="policy.html">Policy</a>
+        </p>
         <p class="footer-credit">
             Made with 
             <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
