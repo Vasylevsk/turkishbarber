@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GC Turkish Barber - Professional men's grooming services in Minehead. Quality haircuts, skin fades, and traditional wet shaves.">
+    <title>GC Turkish Barber | Minehead, Somerset</title>
+    
+    <!-- Favicon (SVG embedded, zero server requests) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Cpath d='M30 20 L50 50 L30 80 M70 20 L50 50 L70 80' stroke='%23f5f5f5' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+    <style>
+        /* ============================================
+           GC TURKISH BARBER - ULTRA-LIGHTWEIGHT
+           
+           Design: Minimalist, calm, confident
+           Performance: Минимальная нагрузка на сервер
+           
+           НАГРУЗКА НА СЕРВЕР:
+           - Только 1 запрос: загрузка HTML файла
+           - Все CSS встроено в HTML (0 запросов)
+           - Favicon встроен в HTML (0 запросов)
+           - JavaScript встроен в HTML (0 запросов)
+           - Системные шрифты (0 запросов)
+           
+           ВНЕШНИЕ ЗАПРОСЫ (не нагружают ваш сервер):
+           - Unsplash CDN: изображение загружается с CDN
+           - Google Maps: iframe загружается с Google
+           - Соцсети: только ссылки, не запросы
+           
+           ИТОГО: Практически нулевая нагрузка на ваш сервер!
+           ============================================ */
+        
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Professional Color Palette */
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --text-primary: #f0f6fc;
+            --text-secondary: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --border: rgba(240, 246, 252, 0.1);
+            --card-bg: rgba(22, 27, 34, 0.6);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-size: 18px;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 17, 23, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.25rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:active,
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            margin-top: 0;
+            min-height: 100vh;
+            padding: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1920&q=75&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(13, 17, 23, 0.75);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 8rem 1.25rem 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 1.1rem 2.5rem;
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            min-height: 44px;
+            border: none;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-button:active {
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        section {
+            padding: 0;
+            width: 100%;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        /* Services */
+        .services {
+            background-color: var(--bg-secondary);
+        }
+
+        .services .section-inner {
+            padding: 6rem 1.5rem;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        .service-category {
+            margin-bottom: 0;
+        }
+
+        .service-category h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-name {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .service-price {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-left: 1.5rem;
+            white-space: nowrap;
+            font-size: 1.05rem;
+        }
+
+        .service-item.no-price .service-name {
+            color: var(--text-secondary);
+        }
+
+        /* About */
+        .about .section-inner {
+            padding: 6rem 1.5rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.85;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: var(--bg-secondary);
+        }
+
+        .contact .section-inner {
+            padding: 6rem 1.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .contact-item a {
+            display: inline-block;
+            min-height: 44px;
+            padding: 0.5rem 0;
+        }
+
+        .contact-item a:active {
+            color: var(--accent);
+        }
+
+        /* Hours */
+        .hours-list {
+            list-style: none;
+            max-width: 320px;
+            margin: 0;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        .hours-day {
+            color: var(--text-secondary);
+        }
+
+        .hours-time {
+            color: var(--text-primary);
+        }
+
+        .hours-time.closed {
+            color: var(--text-muted);
+        }
+
+        /* Map */
+        .map-container {
+            width: 100%;
+            margin-top: 1.25rem;
+            overflow: hidden;
+            border-radius: 4px;
+            background: var(--card-bg);
+            padding: 0.5rem;
+        }
+
+        .map-embed {
+            width: 100%;
+            height: 280px;
+            border: none;
+            display: block;
+            border-radius: 2px;
+        }
+
+        /* Social */
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .social-link:active {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-primary);
+            text-align: center;
+            padding: 3rem 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .footer-location {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .footer-credit {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-credit a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-credit a:hover,
+        .footer-credit a:active {
+            color: var(--accent-hover);
+        }
+
+        .heart-icon {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin: 0 4px;
+            vertical-align: middle;
+            fill: #ff6b6b;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 639px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 0;
+                border-top: 1px solid var(--border);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 1.25rem 0;
+            }
+        }
+
+        /* Desktop Enhancements */
+        @media (min-width: 640px) {
+            header {
+                padding: 1.25rem 2rem;
+            }
+
+            .section-inner {
+                padding: 6rem 3rem;
+            }
+
+            .hero-content {
+                padding: 10rem 3rem 8rem;
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+            }
+
+            .map-embed {
+                height: 350px;
+            }
+
+            .social-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-inner {
+                padding: 7rem 4rem;
+            }
+
+            .hero-content {
+                padding: 12rem 5rem 10rem;
+            }
+
+            .hero h1 {
+                font-size: 5.5rem;
+            }
+
+            .section-title {
+                font-size: 3.5rem;
+            }
+
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 7rem;
+                row-gap: 5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5rem;
+            }
+
+            .contact-item:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            .contact-item:nth-child(4) {
+                grid-column: span 1;
+            }
+
+            .contact-item:nth-child(5) {
+                grid-column: span 1;
+            }
+
+            .map-container {
+                margin-top: 1.5rem;
+            }
+
+            .map-embed {
+                height: 420px;
+            }
+
+            .social-links {
+                justify-content: flex-start;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .section-inner {
+                padding: 8rem 5rem;
+            }
+        }
+
+        /* Desktop Hover Effects */
+        @media (hover: hover) and (pointer: fine) {
+            .nav-links a {
+                transition: color 0.2s ease;
+            }
+
+            .nav-links a:hover {
+                color: var(--text-primary);
+            }
+
+            .contact-item a {
+                transition: color 0.2s ease;
+            }
+
+            .contact-item a:hover {
+                color: var(--accent);
+            }
+
+            .social-link {
+                transition: color 0.2s ease;
+            }
+
+            .social-link:hover {
+                color: var(--accent);
+            }
+
+            .footer-credit a {
+                transition: color 0.2s ease;
+            }
+
+            .hero-button {
+                transition: opacity 0.2s ease, transform 0.2s ease;
+            }
+
+            .hero-button:hover {
+                opacity: 0.9;
+                transform: translateY(-1px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">GC Turkish Barber</a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="tagline">Traditional Turkish Barbering with a Modern Touch</p>
+                <h1>GC Turkish Barber</h1>
+                <p>Quality haircuts, skin fades, and traditional wet shaves in Minehead.</p>
+                <a href="tel:01643818653" class="hero-button">Call Now</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="section-inner">
+                <h2 class="section-title">Services & Prices</h2>
+                <div class="services-container">
+            <div class="service-category">
+                <h3>Men's Haircuts</h3>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <span class="service-name">Gents cut (short back & sides)</span>
+                        <span class="service-price">£17</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">Skin fade (0.5 included)</span>
+                        <span class="service-price">£20</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">All over scissors</span>
+                        <span class="service-price">£18</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">All over clippers</span>
+                        <span class="service-price">£12</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">All over clippers (2 grade)</span>
+                        <span class="service-price">£14</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Kids</h3>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <span class="service-name">Kids cut (short back & sides)</span>
+                        <span class="service-price">£15</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">Kids cut (skin fade)</span>
+                        <span class="service-price">£17</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Beard & Shaving</h3>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <span class="service-name">Beard trim (just clippers)</span>
+                        <span class="service-price">£11</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">Wet shave (with hot towel)</span>
+                        <span class="service-price">£18</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">Head shave (foil shaver)</span>
+                        <span class="service-price">£16</span>
+                    </li>
+                    <li class="service-item">
+                        <span class="service-name">Head shave (with hot towel)</span>
+                        <span class="service-price">£21</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Additional Services</h3>
+                <ul class="service-list">
+                    <li class="service-item no-price">
+                        <span class="service-name">Hair cut</span>
+                    </li>
+                    <li class="service-item no-price">
+                        <span class="service-name">Wet shave with cut throat</span>
+                    </li>
+                    <li class="service-item no-price">
+                        <span class="service-name">Hot towel</span>
+                    </li>
+                </ul>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-inner">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                <p>GC Turkish Barber provides professional men's grooming services using traditional Turkish barbering techniques combined with modern precision and style.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-inner">
+                <h2 class="section-title">Contact & Location</h2>
+                <div class="contact-info">
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>44 The Avenue<br>Minehead TA24 5AZ</p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:01643818653">01643 818653</a></p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Opening Hours</h3>
+                <ul class="hours-list">
+                    <li class="hours-item">
+                        <span class="hours-day">Friday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Saturday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Sunday</span>
+                        <span class="hours-time closed">Closed</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Monday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Tuesday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Wednesday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                    <li class="hours-item">
+                        <span class="hours-day">Thursday</span>
+                        <span class="hours-time">09:00 – 18:00</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-item">
+                <h3>Location</h3>
+                <div class="map-container">
+                    <iframe 
+                        class="map-embed"
+                        src="https://www.google.com/maps?q=GC+Turkish+Barber,+44+The+Avenue,+Minehead+TA24+5AZ&output=embed"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="GC Turkish Barber Location">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/gcbarbersshop/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+                    <a href="https://www.facebook.com/gcturkishbarber" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; GC Turkish Barber</p>
+        <p class="footer-location">Minehead, Somerset</p>
+        <p class="footer-credit">
+            Made with 
+            <svg class="heart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            by <a href="https://ttmms.uk" target="_blank" rel="noopener noreferrer">ttmms.uk</a>
+        </p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
