@@ -16,6 +16,7 @@
     <meta name="keywords" content="barber Minehead, Turkish barber Somerset, haircut Minehead, men's grooming Minehead, skin fade Minehead, wet shave Minehead, beard trim Minehead, barbershop TA24">
     <meta name="author" content="GC Turkish Barber">
     <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="google62b778edcacfc274.html">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="geo.region" content="GB-SOM">
@@ -348,8 +349,10 @@
         .service-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.75rem 0;
+            align-items: center;
+            padding: 1rem 0;
             border-bottom: 1px solid var(--border);
+            gap: 1.5rem;
         }
 
         .service-item:last-child {
@@ -360,14 +363,17 @@
             color: var(--text-secondary);
             font-size: 1.05rem;
             line-height: 1.6;
+            flex: 1;
         }
 
         .service-price {
             color: var(--text-primary);
-            font-weight: 500;
-            margin-left: 1.5rem;
+            font-weight: 600;
             white-space: nowrap;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
+            letter-spacing: 0.01em;
+            min-width: 60px;
+            text-align: right;
         }
 
         .service-item.no-price .service-name {
@@ -383,10 +389,11 @@
 
         .package-price {
             color: var(--text-primary);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
         }
 
         .package-includes {
@@ -761,6 +768,10 @@
                 gap: 5rem;
             }
 
+            .service-price {
+                font-size: 1.2rem;
+            }
+
             .contact-info {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 4rem;
@@ -790,6 +801,14 @@
 
             .section-title {
                 font-size: 3.5rem;
+            }
+
+            .service-price {
+                font-size: 1.25rem;
+            }
+
+            .package-price {
+                font-size: 2rem;
             }
 
             .services-container {
